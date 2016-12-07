@@ -15,9 +15,9 @@ SET sales_in_millions = (sales_in_millions * 10);
 
 
 -- output all albums by michael jackson, Change micheal jackson to peter jackson
-SELECT album_name FROM albums WHERE artist = 'micheal jackson';
+SELECT artist, album_name FROM albums WHERE artist = 'Peter Jackson';
 
 UPDATE albums
 SET artist = 'Peter Jackson'
-WHERE artist = 'micheal jackson';
+WHERE artist = 'Michael Jackson';
 
