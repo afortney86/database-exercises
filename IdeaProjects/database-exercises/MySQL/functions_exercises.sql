@@ -6,38 +6,12 @@ FROM employees
 WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
 GROUP BY gender;
 
--- Update the query to order by first name and then last name.
--- The first result should now be Irena Acton and the last should be Vidya Zweizig.
-
-SELECT *
-FROM employees
-WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
-      AND gender = 'm'
-ORDER BY first_name, Last_name;
 
 
--- Change the order by clause so that you order by last name before first name.
--- Your first result should still be Irena Acton but now the last result should be Maya Zyda.
+-- Update your queries for employees whose names start and end with 'E'.
+-- Use concat() to combine their first and last name together as a single column in your results.
 
-SELECT *
-FROM employees
-WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
-      AND gender = 'm'
-ORDER BY last_name, first_name;
-
-
--- Update your queries for employees with 'E' in their last name to
--- sort the results by their employee number. Your results should not change!
-
-SELECT *
-FROM employees
-where last_name
-      LIKE 'e%' OR last_name LIKE '%e'
-ORDER BY emp_no DESC;
-
--- Employees whos name starts and ends with E
-
-SELECT *
+SELECT concat(first_name, last_name)
 FROM employees
 where last_name
       LIKE 'e%' AND last_name LIKE '%e'
