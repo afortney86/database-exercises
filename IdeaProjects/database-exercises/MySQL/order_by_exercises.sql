@@ -34,7 +34,15 @@ SELECT *
 FROM employees
 where last_name
       LIKE 'e%' OR last_name LIKE '%e'
-ORDER BY emp_no;
+ORDER BY emp_no DESC;
+
+-- Employees whos name starts and ends with E
+
+SELECT *
+FROM employees
+where last_name
+      LIKE 'e%' AND last_name LIKE '%e'
+ORDER BY emp_no DESC ;
 
 
 -- Change the query for employees hired in the 90s and born on Christmas such that the first
