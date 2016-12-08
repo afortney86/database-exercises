@@ -20,7 +20,7 @@ LIMIT 5;
 -- Try to think of your results as batches, or sets.
 -- The first five results are your first batch.
 -- The five after that would be your second batch, etc.
--- Update the query to find the tenth batch of results.
+-- Update the query to find the tenth batch of results....
 
 SELECT first_name, last_name
 FROM employees
