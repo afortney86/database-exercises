@@ -10,11 +10,11 @@ ORDER BY first_name;
 -- Update the query to order by first name and then last name.
 -- The first result should now be Irena Acton and the last should be Vidya Zweizig.
 
-# SELECT *
-# FROM employees
-# WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
-#       AND gender = 'm'
-# ORDER BY first_name, Last_name;
+SELECT *
+FROM employees
+WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
+      AND gender = 'm'
+ORDER BY first_name, Last_name;
 
 
 -- Change the order by clause so that you order by last name before first name.
