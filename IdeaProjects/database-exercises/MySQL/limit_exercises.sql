@@ -16,3 +16,16 @@ WHERE hire_date
       AND '1999-12-31' AND birth_date LIKE '%12-25'
 ORDER BY birth_date ASC, hire_date DESC
 LIMIT 5;
+
+-- Try to think of your results as batches, or sets.
+-- The first five results are your first batch.
+-- The five after that would be your second batch, etc.
+-- Update the query to find the tenth batch of results.
+
+SELECT first_name, last_name
+FROM employees
+WHERE hire_date
+      BETWEEN '1990-1-1'
+      AND '1999-12-31' AND birth_date LIKE '%12-25'
+ORDER BY birth_date ASC, hire_date DESC
+LIMIT 5 OFFSET 50 ;

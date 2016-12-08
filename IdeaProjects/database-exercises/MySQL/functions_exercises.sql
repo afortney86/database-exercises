@@ -1,11 +1,10 @@
--- Modify your first query to order by first name.
--- The first result should be Irena Majewski and the last result should be Vidya Schaft.
+-- Update your query for 'Irena', 'Vidya', or 'Maya'.
+-- Use count(*) and GROUP BY to find the number of employees for each gender with those names.
 
-SELECT *
+SELECT count(*)
 FROM employees
 WHERE (first_name = 'Irena' OR first_name = 'Vidya' OR first_name = 'Maya')
-      AND gender = 'm'
-ORDER BY first_name;
+GROUP BY gender;
 
 -- Update the query to order by first name and then last name.
 -- The first result should now be Irena Acton and the last should be Vidya Zweizig.
