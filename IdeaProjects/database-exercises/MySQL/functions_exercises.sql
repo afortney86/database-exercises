@@ -39,12 +39,13 @@ ORDER BY `Days working` DESC ;
 -- Add a count() to your results and use ORDER BY to make it easier to find
 -- employees whose unusual name is shared with others.
 
-SELECT count(*) AS 'repeats',
+SELECT
+  count(*) AS 'repeats',
   first_name,
   last_name
 FROM employees
 WHERE last_name
       like '%q%' AND last_name NOT LIKE '%qu%'
 GROUP BY first_name, last_name
-ORDER BY repeats DESC ;
+ORDER BY repeats DESC, first_name, last_name ;
 
