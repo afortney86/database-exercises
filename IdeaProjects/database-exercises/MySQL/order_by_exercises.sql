@@ -31,17 +31,10 @@ ORDER BY last_name, first_name;
 -- sort the results by their employee number. Your results should not change!
 
 SELECT *
-  AS "Employees whos last name starts with e"
 FROM employees
 where last_name
-      LIKE 'e%' OR last_name LIKE '%e';
-
--- Employees whos name starts and ends with E
-
-SELECT *
-FROM employees
-where last_name
-      LIKE 'e%' AND last_name LIKE '%e';
+      LIKE 'e%' OR last_name LIKE '%e'
+ORDER BY emp_no;
 
 
 -- Change the query for employees hired in the 90s and born on Christmas such that the first
